@@ -72,6 +72,28 @@
 //     });
 // }
 
+// ----------- copy object
+
+// const refs = {
+//   url: "https://api.agify.io",
+//   form: `document.querySelector(".user-form")`,
+//   searchButton: `document.querySelector(".search-button")`,
+//   renderBoxEl: `document.querySelector(".render-search")`,
+// };
+
+// // 1.
+// const copyObj1 = JSON.parse(JSON.stringify(refs));
+
+// // 2
+// const copyObj2 = { ...refs };
+
+// // 3
+// const copyObj3 = Object.assign({}, refs);
+
+// // 4 for....in
+// // refs.assign;
+// console.log(copyObj3);
+
 // =================================== 1 ==========================================
 // // Реалізуйте функціонал отримання даних з API по кліку на кнопку "BUTTON" і виведення їх
 // // на сторінку при кожному кліку по кнопці. Кожен факт має мати свій порядковий номер.
