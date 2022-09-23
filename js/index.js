@@ -71,9 +71,6 @@
 //       console.error(e);
 //     });
 // }
-
-// ----------- copy object
-
 // const refs = {
 //   url: "https://api.agify.io",
 //   form: `document.querySelector(".user-form")`,
@@ -81,18 +78,53 @@
 //   renderBoxEl: `document.querySelector(".render-search")`,
 // };
 
+// ----------- copy object
 // // 1.
 // const copyObj1 = JSON.parse(JSON.stringify(refs));
-
 // // 2
 // const copyObj2 = { ...refs };
-
 // // 3
 // const copyObj3 = Object.assign({}, refs);
-
 // // 4 for....in
 // // refs.assign;
 // console.log(copyObj3);
+
+// const counter = () => {
+//   let count = 0;
+//   return () => {
+//     return (count += 1);
+//   };
+// };
+
+// const number = counter();
+// const number2 = counter();
+
+// console.log(number());
+// console.log(number());
+// console.log(number());
+// console.log(number2());
+// console.log(number());
+// console.log(number2());
+
+// Task 4--------
+// const URL = "https://dog.ceo/api";
+// const searchButtonEl = document.querySelector(".search-button");
+// const renderEl = document.querySelector(".render-search");
+// searchButtonEl.addEventListener("click", onButtonClick);
+
+// function onButtonClick(e) {
+//   e.preventDefault();
+//   fetch(`${URL}/breeds/image/random`)
+//     .then((response) => {
+//       console.log(response);
+//       return response.json();
+//     })
+//     .then((render) => {
+//       const gallery = `<img src="${render.message}" alt='dog' />`;
+//       renderEl.insertAdjacentHTML("beforeend", gallery);
+//     })
+//     .catch((error) => console.log(error));
+// }
 
 // =================================== 1 ==========================================
 // // Реалізуйте функціонал отримання даних з API по кліку на кнопку "BUTTON" і виведення їх
